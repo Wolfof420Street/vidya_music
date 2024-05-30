@@ -14,6 +14,7 @@ import 'package:vidya_music/utils/utils.dart';
 import 'package:vidya_music/view/pages/main_page.dart';
 
 Future<void> main() async {
+
   WidgetsFlutterBinding.ensureInitialized();
 
   await EasyLocalization.ensureInitialized();
@@ -43,7 +44,7 @@ Future<void> main() async {
       child: MultiBlocProvider(
         providers: [
           BlocProvider(create: (context) => PlaylistCubit()),
-          BlocProvider(create: (context) => AudioPlayerCubit()),
+          BlocProvider(create: (context)  => AudioPlayerCubit()),
           BlocProvider(create: (context) => ThemeCubit()),
         ],
         child: EasyLocalization(
@@ -58,6 +59,7 @@ Future<void> main() async {
 }
 
 class MyApp extends StatefulWidget {
+  
   const MyApp({super.key});
 
   @override
